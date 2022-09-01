@@ -1,8 +1,42 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>Benvenuto</title>
-    </head>
-    <body>
-        <div align="center">Hello World!</div>
-    </body>
+      <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <title>Inventario</title>
+      </head>
+      <body>
+            <h2>Inventario</h2>
+            <div>
+                  <label for="name">Link Google Drive</label>
+                  <input type="text" id="drive" size="40"
+                  onchange="urlChange();">
+                  <button id="scarica" onclick="urlChange();">Scarica</button>
+            </div>
+            <p></p>
+            <div>
+                  <label for="name">Data Ordinazioni</label>
+                  <input type="text" id="data"  onchange="urlChange();">
+            </div>
+            <p></p>
+            <div>
+                  <label for="name">Email</label>
+                  <input type="text" id="email" onchange="salva('email')" size="30">
+            </div>
+            <p></p>
+            <div>
+                  <label for="name">Password</label>
+                  <input type="password" id="pwd" onchange="salva('pwd')" size="30">
+            </div>
+            <p></p>
+            <button id="invia" onclick="inviaEmail();" disabled="true">Invia le email</button>
+            <p id="log"><b>Inserisci la data e scarica da un link.</b></p>
+
+
+            <script src="https://smtpjs.com/v3/smtp.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/public-google-sheets-parser@latest"></script>
+            <script src="util.js"></script>
+	      <script src="index.js"></script>
+      </body>
 </html>
